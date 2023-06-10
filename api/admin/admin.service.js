@@ -50,7 +50,7 @@ module.exports = {
 
   updateAdmin: (id, data, callback) => {
     pool.query(`UPDATE admin SET name=?, email=?, password=? WHERE id=?`,
-    [data.name, data.email, data.password, data.cctv, data.location, data.id], 
+    [data.name, data.email, data.password, data.cctv, data.location, id], 
     (error, results, fields) => {
       if (error) {
         return callback(error);

@@ -1,23 +1,2 @@
 runtime: nodejs18
-
-env_variables:
-  NODE_ENV: production
-  PORT: 4000
-  MYSQL_HOST: 34.101.172.209
-  MYSQL_PORT: 3306
-  MYSQL_USER: sabo-admin
-  MYSQL_PASSWORD: sabosecret
-  MYSQL_DATABASE: sabo_db
-
-handlers:
-  - url: /api/users/.*
-    script: auto
-
-  - url: /api/cctv/.*
-    script: auto
-
-  - url: /api/admin/.*
-    script: auto
-
-  - url: /.*
-    script: auto
+service: default

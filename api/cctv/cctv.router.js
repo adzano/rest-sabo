@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { checkToken } = require("../../auth/token_validation");
 
 router.post("/create", checkToken, createCctv);
-router.put("/update", checkToken, updateCctv);
+router.put("/update/:id", checkToken, updateCctv);
 router.delete("/delete", checkToken, deleteCctv);
 router.get("/userscctv", getUserByCctvLocation);
 router.get("/getlocation", checkToken, getLocationCctv);

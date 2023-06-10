@@ -80,8 +80,9 @@ module.exports = {
   },
 
   updateCctv: (req, res) => {
-    const body = req.body;
-    updateCctv(body, (err, results) => {
+    const id = req.params.id;
+    const data = req.body;
+    updateCctv(id, data, (err, results) => {
       if (err) {
         console.log(err);
         return;

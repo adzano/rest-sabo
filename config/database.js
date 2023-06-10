@@ -1,11 +1,11 @@
 const { createPool } = require("mysql2");
 
 const pool = createPool({
-  host: process.env.MYSQL_HOST,
-  port: process.env.MYSQL_PORT,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
+  host: "34.101.172.209",
+  port: 3306,
+  user: "sabo-admin",
+  password: "sabosecret",
+  database: "sabo_db",
   connectionLimit: 10
 });
 

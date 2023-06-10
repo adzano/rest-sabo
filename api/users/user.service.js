@@ -62,7 +62,7 @@ module.exports = {
     });
   },
 
-  updateUser: (data, callback) => {
+  updateUser: (id, data, callback) => {
     pool.query(
       `UPDATE users SET name=?, email=?, password=?, location=? WHERE id=?`,
       [data.name, data.email, data.password, data.location, id],
